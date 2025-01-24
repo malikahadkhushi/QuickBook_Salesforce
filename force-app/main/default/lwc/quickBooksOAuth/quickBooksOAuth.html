@@ -1,0 +1,19 @@
+<template>
+   <lightning-card title="QuickBooks Integration">
+      <div class="slds-p-around_medium">
+         <template if:true={isLoading}>
+            <h1 class="header">Authorization in Progress</h1>
+            <p class="message">We are processing the authorization for QuickBooks integration. Please wait while we
+               complete the setup.</p>
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+         </template>
+         <template if:false={isLoading}>
+            <lightning-button 
+               label="Sync Accounts" 
+               variant="brand" 
+               onclick={handleSyncAccounts}>
+            </lightning-button>
+         </template>
+      </div>
+   </lightning-card>
+</template>

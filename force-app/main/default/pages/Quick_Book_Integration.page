@@ -1,0 +1,47 @@
+<apex:page>
+    <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    background-color: #f4f4f9;
+                    padding: 50px;
+                }
+                h1 {
+                    color: #4CAF50;
+                }
+                .message {
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    margin-top: 30px;
+                    font-size: 18px;
+                    color: #333;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Congratulations</h1>
+            <div class="message">
+                QuickBooks Integration
+            </div>
+
+            <script>
+                // Extract URL parameters
+                var urlParams = new URLSearchParams(window.location.search);
+                var code = urlParams.get('code');
+                var realmId = urlParams.get('realmId');
+                
+                // Construct the new URL with code__c and realmId__c
+                var newUrl = 'https://focusteck2-dev-ed.develop.lightning.force.com/lightning/n/Quick_Books_Integration?code__c=' + code + '&realmId__c=' + realmId;
+
+                // Redirect to the new URL
+                if (code && realmId) {
+                    window.location.href = newUrl;
+                }
+            </script>
+        </body>
+    </html>
+</apex:page>

@@ -1,0 +1,16 @@
+.header {
+   text-align: center;
+   font-size: 24px;
+   color: #4CAF50;
+}
+
+.message {
+   text-align: center;
+   font-size: 18px;
+   color: #333;
+   margin-top: 20px;
+}
+
+.slds-p-around_medium {
+   text-align: center;
+}
